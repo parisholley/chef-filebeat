@@ -25,7 +25,7 @@ end
 
 directory node['filebeat']['prospectors_dir'] do
   recursive true
-  action :create
+  action [:delete, :create]
 end
 
 file node['filebeat']['conf_file'] do
